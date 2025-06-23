@@ -25,7 +25,7 @@ export function PostCreate({ onPostCreated }) {
     const accessToken = localStorage.getItem('accessToken');
 
     const response = await axios.post(
-      "http://localhost:5000/api/user/createPost", 
+      "https://social-media-backend-wlpj.onrender.com", 
       newPost,
       {
         headers: {
