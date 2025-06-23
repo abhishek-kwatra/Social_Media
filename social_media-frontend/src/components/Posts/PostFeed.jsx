@@ -15,7 +15,7 @@ export function PostFeed() {
 
   const loadPosts = async () => {
     try {
-      const response = await axios.get('https://social-media-backend-wlpj.onrender.com');
+      const response = await axios.get('https://social-media-backend-wlpj.onrender.com/api/user/getFeed');
       setPosts(response.data.posts);
     } catch (error) {
       console.error('Error loading posts:', error);
@@ -39,7 +39,7 @@ export function PostFeed() {
     }
 
     const response = await axios.post(
-      `http://localhost:5000/api/posts/${postId}/like`,
+      `https://social-media-backend-wlpj.onrender.com/api/posts/${postId}/like`,
       {}, 
       {
         headers: {
