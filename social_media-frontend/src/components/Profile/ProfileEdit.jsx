@@ -17,7 +17,7 @@ export function ProfileEdit({ onCancel }) {
     const accessToken = localStorage.getItem("accessToken");
 
     const response = await axios.put(
-      "https://social-media-backend-wlpj.onrender.com",
+      "https://social-media-backend-wlpj.onrender.com/api/user/update-bio",
       {bio, name},
       {
         headers: {
