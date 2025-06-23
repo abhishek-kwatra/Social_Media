@@ -33,7 +33,7 @@ export function AuthProvider({ children }) {
   const login = async (email, password) => {
   try {
     const response = await axios.post(
-      "https://social-media-backend-wlpj.onrender.com", 
+      "https://social-media-backend-wlpj.onrender.com/api/login", 
       { email, password },
     );
 
@@ -55,9 +55,8 @@ export function AuthProvider({ children }) {
 
 const signup = async (email, password, name, profile_pic) => {
   try {
-    // Call backend API using axios
     const response = await axios.post(
-      "https://social-media-backend-wlpj.onrender.com", 
+      "https://social-media-backend-wlpj.onrender.com/api/register", 
       { email, password, name, profile_pic},
       {
         headers: {
